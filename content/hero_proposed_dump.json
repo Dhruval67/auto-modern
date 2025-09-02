@@ -1,0 +1,18 @@
+{
+  "variant": "image-right",
+  "headline": "Transform Your Online Presence",
+  "subheadline": "Experience the future of web design with AI-powered updates.",
+  "primaryCta": {
+    "label": "Get Started",
+    "href": "/get-started"
+  },
+  "secondaryCta": {
+    "label": "Discover More",
+    "href": "/about"
+  },
+  "media": {
+    "kind": "image",
+    "imageUrl": "https://example.com/hero-image.jpg",
+    "alt": "A modern website design"
+  }
+}

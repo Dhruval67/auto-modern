@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "icon": "🚀", "title": "Next-gen AI updates", "href": "https://example.com/ai-updates" },
+    { "icon": "🎨", "title": "Chic design for everyone" },
+    { "icon": "⚡", "title": "Reliable auto-deploy features" },
+    { "icon": "🔧", "title": "Seamless integration tools", "href": "https://example.com/integration-tools" },
+    { "icon": "📈", "title": "Data-driven decision making" }
+  ]
+}

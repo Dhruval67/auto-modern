@@ -6,22 +6,29 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "ai:update:hero": "node scripts/ai/updateHero.mjs",
+    "ai:update:highlights": "node scripts/ai/updateHighlights.mjs",
+    "ai:update:all": "npm run ai:update:hero && npm run ai:update:highlights"
   },
   "dependencies": {
+    "dotenv": "^17.2.1",
+    "next": "15.5.2",
+    "openai": "^5.16.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.2"
+    "zod": "^4.1.5"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
+
 }

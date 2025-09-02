@@ -1,0 +1,13 @@
+{
+  "variant": "image-left",
+  "headline": "Welcome to AutoModern",
+  "subheadline": "Variant-driven hero powered by JSON + Zod.",
+  "primaryCta": { "label": "Get Started", "href": "/get-started" },
+  "secondaryCta": { "label": "Learn More", "href": "/about" },
+  "media": {
+    "kind": "image",
+    "imageUrl": "https://picsum.photos/1200/800",
+    "alt": "Sample image"
+  }
+}
+
