@@ -1,0 +1,39 @@
+name: Auto Update Content (AI → PR)
+
+on:
+  schedule:
+    - cron: "15 12 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  update-content:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install dependencies
+        run: npm ci
+      - name: Run AI updaters
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          npm run ai:update:hero
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(ai): refresh hero via AutoModern"
+          title: "AutoModern: content refresh"
+          body: |
+            This PR was opened automatically by AutoModern.
+            Changes:
+            - Updated `content/hero.json`
+          branch: automodern/auto-refresh
+          delete-branch: true
